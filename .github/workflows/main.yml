@@ -24,7 +24,7 @@ jobs:
 
       - name: Tag Docker image for Azure Web App
         run: |
-          docker tag myapp-image:latest testdockernagi.azurecr.io/studentperformance1:latest
+          docker tag studentperformance1:latest testdockernagi.azurecr.io/studentperformance:latest
 
       - name: Log in to Azure Container Registry
         uses: azure/docker-login@v1
@@ -41,4 +41,4 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: my-webapp-name
-          images: testdockernagi.azurecr.io/studentperformance1:latest
+          images: testdockernagi.azurecr.io/studentperformance:latest
