@@ -20,7 +20,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t myapp-image .
+          docker build -t testdockernagi.azurecr.io/studentperformance .
 
       - name: Tag Docker image for Azure Web App
         run: |
